@@ -1,0 +1,660 @@
+/* ========== RESET AND BASICS ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: rgb(0, 0, 0);
+  color: #2c2c2c;
+  line-height: 1.6;
+}
+
+header {
+      background: rgba(14, 14, 14, 0.8);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      border-bottom: 2px solid #F4B400;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #F4B400;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color:#E8D9F1;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #F4B400;
+}
+
+/* ========== HERO/HOME SECTION ========== */
+.hero {
+  background: url('https://wallpaperbat.com/img/152592-hd-creativity-bulb-abstract-art-wallpaper.jpg') center/cover no-repeat;
+  /*background: linear-gradient(135deg, #460C6D, #0E0E0E);*/
+  height: 100vh;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+  color: #8736dc;
+  text-align: center;
+  padding: 0 1rem;
+  padding-top: 80px;
+}
+
+.hero h1 {
+  font-size: 4.5rem;
+  color: #e4a724;;
+  margin-bottom: 1rem;
+  text-shadow: 5px 15px 15px rgba(1, 1, 1, 0.803);
+  font-weight: bold;
+}
+.hero h2 {
+  color: black; 
+  font-weight: bold;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+.hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+
+.hero h1::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 100%; /* places it below */
+  left: 0;
+  width: 100%;
+  transform: scaleY(-1); /* flip upside down */
+  opacity: 0.3;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+  color: white;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+.quote {
+  color: blueviolet;
+  font-style: italic;
+  animation: fadeQuote 6s infinite;
+  font-weight: bolder;
+}
+
+@keyframes fadeQuote {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+
+
+/* ========== SECTIONS ========== */
+section {
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+
+*/
+/* ========== ABOUT SECTION ========== */
+#about h2 {
+font-weight: bold;
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  
+}
+
+.stats div {
+  background: #fff;
+  padding: 1.5rem 2rem;
+  border: 2px solid blueviolet ;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.stats div:hover {
+  transform: translateY(-5px);
+}
+
+/* ========== MISSION/VISION SECTION ========== */
+#mission {
+  background: url('https://wallpapercave.com/wp/wp1917510.jpg') center/cover no-repeat;
+  color: #E8D9F1;
+  padding: 5rem 2rem;
+}
+
+.mission-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.mission-box div {
+  background: #1c1c1c;
+  border: 1px solid blueviolet;
+  border-radius: 15px;
+  padding: 2rem;
+  width: 300px;
+  box-shadow: 0 4px 12px rgba(85, 19, 227, 0.3);
+}
+
+/* ========== GALLERY SECTION ========== */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.card {
+    border: 1px solid #F4B400;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(244,180,0,0.3);
+    transition: 0.3s;
+    color: #E8D9F1;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 20px rgba(244,180,0,0.5);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card h3 {
+  padding: 1rem;
+  color:#F4B400;
+}
+
+
+/* TEAM MEMBERS*/
+#team {
+  background: url("https://img.freepik.com/premium-photo/business-office-design-background-ui-ux-design_155807-285.jpg") center/cover no-repeat;
+  padding: 5rem 2rem;
+  color: #E8D9F1;
+}
+
+.team-member {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 4rem;
+  background-color: #0E0E0E;
+  border: 1px solid blueviolet;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 6px 16px rgba(103, 2, 186, 0.384);
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(138, 43, 226, 0.6);
+}
+
+.team-member img {
+  width: 250px;
+  height: 250px;
+  border-radius: 20px;
+  object-fit: cover;
+  border: 2px solid blueviolet;
+}
+
+.team-text {
+  text-align: left;
+  max-width: 500px;
+}
+
+.team-text h3 {
+  color: #F4B400;
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+}
+
+.team-text .role {
+  color: blueviolet;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.team-text .bio {
+  color: #E8D9F1;
+  line-height: 1.6;
+}
+
+/* Alternate layout for right-aligned members */
+.team-member.right {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+.team-member.left {
+  flex-direction: row-reverse;
+  text-align: left;
+}
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .team-member,
+  .team-member.left,
+  .team-member.right {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .team-member img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .team-text {
+    text-align: center;
+  }
+}
+
+
+/* ========== SDG/SKILLS SECTION ========== */
+.sdg-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.sdg-card {
+  color: white;
+  background-color: #0E0E0E;
+  padding: 1.5rem;
+  border-left: 6px solid blueviolet;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgb(104, 67, 108);
+  transition: 0.3s;
+}
+
+#skills {
+    background:url("https://img.freepik.com/free-photo/creative-light-bulb-abstract-glowing-blue-background-generative-ai_188544-8090.jpg") center/cover no-repeat;
+}
+
+section {
+  background-color: #E8D9F1;
+}
+
+.sdg-card:hover {
+  transform: translateY(-5px);
+}
+
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.card {
+    background: #1c1c1c;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding-bottom: 20px;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(255, 193, 7, 0.4);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin: 15px 0;
+    color: blueviolet;
+}
+
+.card p {
+    font-size: 1rem;
+    padding: 0 15px;
+    color: #ccc;
+}
+
+/* ========== TESTIMONIAL SECTION ========== */
+#testimonials {
+  /*background:url("https://wallpapercave.com/wp/wp1917542.jpg") center/cover no-repeat;*/
+  color: #E8D9F1;
+  padding: 5rem 2rem;
+}
+
+.testimonials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.t-card {
+  background: #1c1c1c;
+  border: 1px solid #F4B400;
+  border-radius: 12px;
+  padding: 1.5rem;
+  max-width: 300px;
+  box-shadow: 0 4px 10px rgba(244,180,0,0.3);
+  
+}
+
+
+.t-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.workshops {
+  background-color: #0E0E0E;
+  color: #EBD6FF;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.workshops h2 {
+  color: #b57edc; /* light purple */
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #d8bfff;
+  margin-bottom: 40px;
+  font-style: italic;
+}
+
+.workshop-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.workshop-card {
+  background-color: #1A1A1A;
+  border: 2px solid #7d4efc;
+  border-radius: 15px;
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(139, 0, 255, 0.3);
+  transition: 0.3s ease;
+}
+
+.workshop-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.5); /* gold glow */
+}
+
+.workshop-card img {
+  width: 100%;
+  height: 350px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+
+.workshop-card h3 {
+  color: #F4B400;
+  margin-bottom: 10px;
+}
+.workshop-card p {
+  color: #ccc;
+  line-height: 1.5;
+}
+
+
+
+
+/* ========== CONTACT SECTION ========== */
+#contact{
+    background: url("https://wallpapers.com/images/hd/group-silhouettes-on-mountain-top-qeaazgsft83yzu7v.jpg")center/cover no-repeat; 
+}
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input, textarea {
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+textarea {
+  height: 120px;
+  resize: none;
+}
+
+.btn {
+  font-weight: bold;
+  background-color: #F4B400;
+  color: #0E0E0E;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #460C6D;
+  color: #F4B400;
+  transform: scale(1.05);
+}
+
+
+/* ========== RESPONSIVE DESIGN ========== */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  section {
+    padding: 4rem 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .hero h1 { font-size: 2.5rem; }
+  .btn { padding: 0.6rem 1.2rem; font-size: 0.9rem; }
+}
+
+
+/* ========== SCROLL REVEAL ANIMATION ========== */
+section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+/* ========== FOOTER ========== */
+.contact-info {
+    margin-top: 20px; 
+}
+
+.contact-info p {
+  display: flex; 
+  align-items: center; 
+  margin: 5px 0; 
+}
+.contact-info img {
+  width: 20px; 
+  height: 20px; 
+  margin-right: 10px; 
+}
+
+footer {
+  background-color: #111;
+  color: #ccc;
+  padding: 3rem 5%;
+  text-align: center;
+  border-top: 2px solid #460C6D;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  text-align: left;
+}
+.footer-container h3 {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+.footer-container ul {
+  list-style: none;
+}
+.footer-container a {
+  color: #ccc;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.footer-container a:hover {
+  color: rgb(192, 117, 27);
+}
+.social-icons img {
+  width: 30px;
+  margin: 0 8px;
+  transition: transform 0.3s;
+}
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+.footer-bottom {
+  margin-top: 1.5rem;
+  color: #999;
+  font-size: 0.9rem;
+}
+
+
+/* ===== Skill Pages ===== */
+.skill-hero {
+  position: relative;
+  height: 70vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill-hero .overlay {
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  text-align: center;
+  padding: 3rem;
+  border-radius: 20px;
+}
+
+.skill-hero h1 {
+  font-size: 3rem;
+  color: #F4B400;
+}
+
+.skill-overview, .materials, .steps, .benefits {
+  padding: 4rem 2rem;
+  background: #0E0E0E;
+  color: #E8D9F1;
+  border-top: 2px solid blueviolet;
+}
+
+.materials ul, .steps ol {
+  text-align: left;
+  margin: 2rem auto;
+  max-width: 600px;
+  line-height: 1.8;
+}
+
+.materials li::marker, .steps li::marker {
+  color: #F4B400;
+  font-weight: bold;
+}
+
+.benefits {
+  background: linear-gradient(135deg, #0E0E0E, #2C003E);
+}
