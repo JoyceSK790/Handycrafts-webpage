@@ -53,8 +53,10 @@ nav a:hover {
 
 /* ========== HERO/HOME SECTION ========== */
 .hero {
-  background: url('https://wallpaperbat.com/img/152592-hd-creativity-bulb-abstract-art-wallpaper.jpg') center/cover no-repeat;
+  background: url('https://images.hdqwalls.com/download/harmony-boat-creative-background-nr-1920x1080.jpg') center center/ cover no-repeat;
   /*background: linear-gradient(135deg, #460C6D, #0E0E0E);*/
+  background-attachment: fixed;
+  filter: brightness(1.1) contrast(1.05);
   height: 100vh;
   display: flex;
   flex-direction:column;
@@ -109,7 +111,7 @@ nav a:hover {
   margin-bottom: 2rem;
 }
 .quote {
-  color: blueviolet;
+  color: rgb(228, 219, 236);
   font-style: italic;
   animation: fadeQuote 6s infinite;
   font-weight: bolder;
@@ -160,7 +162,7 @@ font-weight: bold;
 
 /* ========== MISSION/VISION SECTION ========== */
 #mission {
-  background: url('https://wallpapercave.com/wp/wp1917510.jpg') center/cover no-repeat;
+  background: black;
   color: #E8D9F1;
   padding: 5rem 2rem;
 }
@@ -323,7 +325,7 @@ font-weight: bold;
 }
 
 #skills {
-    background:url("https://img.freepik.com/free-photo/creative-light-bulb-abstract-glowing-blue-background-generative-ai_188544-8090.jpg") center/cover no-repeat;
+    background:black;
 }
 
 section {
@@ -377,7 +379,6 @@ section {
 
 /* ========== TESTIMONIAL SECTION ========== */
 #testimonials {
-  /*background:url("https://wallpapercave.com/wp/wp1917542.jpg") center/cover no-repeat;*/
   color: #E8D9F1;
   padding: 5rem 2rem;
 }
@@ -433,7 +434,7 @@ section {
 }
 
 .workshop-card {
-  background-color: #1A1A1A;
+  background-color: black;
   border: 2px solid #7d4efc;
   border-radius: 15px;
   width: 300px;
