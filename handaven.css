@@ -21,7 +21,7 @@ header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 15px 40px;
+      padding: 15px 30px;
       border-bottom: 2px solid #F4B400;
       position: sticky;
       top: 0;
@@ -54,7 +54,6 @@ nav a:hover {
 /* ========== HERO/HOME SECTION ========== */
 .hero {
   background: url('https://images.hdqwalls.com/download/harmony-boat-creative-background-nr-1920x1080.jpg') center center/ cover no-repeat;
-  /*background: linear-gradient(135deg, #460C6D, #0E0E0E);*/
   background-attachment: fixed;
   filter: brightness(1.1) contrast(1.05);
   height: 100vh;
@@ -76,7 +75,7 @@ nav a:hover {
   font-weight: bold;
 }
 .hero h2 {
-  color: black; 
+  color: rgba(215, 19, 19, 0.773); 
   font-weight: bold;
 }
 
