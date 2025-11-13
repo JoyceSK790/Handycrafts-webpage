@@ -22,7 +22,7 @@ header {
       justify-content: space-between;
       align-items: center;
       padding: 15px 30px;
-      border-bottom: 2px solid #F4B400;
+      border-bottom: 2px solid blueviolet;
       position: sticky;
       top: 0;
       z-index: 10;
@@ -42,7 +42,7 @@ nav ul {
 
 nav a {
   text-decoration: none;
-  color:#E8D9F1;
+  color: white;
   font-weight: 500;
   transition: 0.3s;
 }
@@ -51,9 +51,11 @@ nav a:hover {
   color: #F4B400;
 }
 
+
+
 /* ========== HERO/HOME SECTION ========== */
 .hero {
-  background: url('https://images.hdqwalls.com/download/harmony-boat-creative-background-nr-1920x1080.jpg') center center/ cover no-repeat;
+  background: url('https://wallpaper.dog/large/5553080.jpg') center center/ cover no-repeat;
   background-attachment: fixed;
   filter: brightness(1.1) contrast(1.05);
   height: 100vh;
@@ -75,7 +77,7 @@ nav a:hover {
   font-weight: bold;
 }
 .hero h2 {
-  color: rgba(215, 19, 19, 0.773); 
+  color:black; 
   font-weight: bold;
 }
 
@@ -161,7 +163,7 @@ font-weight: bold;
 
 /* ========== MISSION/VISION SECTION ========== */
 #mission {
-  background: black;
+  background:url('https://wallpaper.dog/large/5552803.png') center/cover no-repeat;
   color: #E8D9F1;
   padding: 5rem 2rem;
 }
@@ -494,8 +496,8 @@ textarea {
 
 .btn {
   font-weight: bold;
-  background-color: #F4B400;
-  color: #0E0E0E;
+  background-color: rgb(223, 182, 237);
+  color: black;
   padding: 0.8rem 1.5rem;
   border: none;
   border-radius: 25px;
@@ -505,8 +507,8 @@ textarea {
 }
 
 .btn:hover {
-  background-color: #460C6D;
-  color: #F4B400;
+  background-color:#F4B400;
+  color: black;
   transform: scale(1.05);
 }
 
