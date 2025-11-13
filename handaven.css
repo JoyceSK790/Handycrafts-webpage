@@ -131,8 +131,6 @@ section {
   text-align: center;
 }
 
-
-*/
 /* ========== ABOUT SECTION ========== */
 #about h2 {
 font-weight: bold;
@@ -511,31 +509,178 @@ textarea {
   color: black;
   transform: scale(1.05);
 }
-
+.whatsapp-button {
+  background-color: rgb(223, 182, 237);
+  color: rgb(0, 0, 0);
+  padding: 12px 20px;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.whatsapp-button:hover {
+  background-color: #F4B400;
+  color: black;
+  transform: scale(1.1);
+}
 
 /* ========== RESPONSIVE DESIGN ========== */
-@media (max-width: 768px) {
+
+/* Tablets and below (max-width: 1024px) */
+@media (max-width: 1024px) {
   header {
     flex-direction: column;
-    padding: 1rem;
+    text-align: center;
   }
 
   nav ul {
-    flex-direction: column;
-    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
   }
 
   .hero h2 {
+    font-size: 1.2rem;
+  }
+
+  .mission-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team-member {
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  .team-member img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+  }
+
+  .team-text {
+    padding: 1rem;
+  }
+}
+
+/* Mobile screens (max-width: 768px) */
+@media (max-width: 768px) {
+  nav ul {
+    display: none; /* hide default menu */
+    flex-direction: column;
+    background: rgba(20, 20, 20, 0.9);
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 60%;
+    border-left: 2px solid blueviolet;
+    text-align: left;
+    padding: 1rem;
+  }
+
+  nav.active ul {
+    display: flex;
+  }
+
+  .hero {
+    height: 90vh;
+    padding-top: 100px;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero h2 {
+    font-size: 1rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+
+  .stats {
+    flex-direction: column;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Very small screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .hero h1 {
     font-size: 2rem;
   }
 
-  section {
-    padding: 4rem 1rem;
+  .hero h2 {
+    font-size: 0.9rem;
+  }
+
+  .quote {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .sdg-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonials {
+    flex-direction: column;
+  }
+
+  .workshop-container {
+    flex-direction: column;
   }
 }
-@media (max-width: 480px) {
-  .hero h1 { font-size: 2.5rem; }
-  .btn { padding: 0.6rem 1.2rem; font-size: 0.9rem; }
+
+/* ===== Hamburger Menu Icon ===== */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  color: #fbbf24;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* ===== Mobile Navbar (when screen is small) ===== */
+@media (max-width: 768px) {
+  nav ul {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: rgba(0, 0, 0, 0.95);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 15px;
+    width: 70%;
+    border-left: 2px solid #fbbf24;
+    display: none;
+  }
+
+  nav.active ul {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
 }
 
 
