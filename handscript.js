@@ -53,6 +53,42 @@ window.addEventListener('scroll', () => {
 });
 
 
+// ========== RESPONSIVE NAVIGATION MENU ==========
+  const hamburger = document.getElementById('hamburger');
+  const nav = document.querySelector('nav');
+  const navLinks = document.querySelectorAll('nav ul li a');
 
+  // Toggle menu when ☰ is clicked
+  hamburger.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
 
+  // Close menu when a link is clicked
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('active');
+    });
+  });
 
+  document.getElementById("contactForm").addEventListener("submit", function(event){
+    event.preventDefault();
+
+    // Collect input values
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const skill = document.getElementById("skill").value;
+    const message = document.getElementById("message").value;
+
+    // Your WhatsApp number (use international format without +)
+    const phoneNumber = "2349130427939";
+
+    // Create message text
+    const text = `Hello! I want to join the Handcraft Haven Club.%0A
+    Full Name: ${name}%0A
+    Email: ${email}%0A
+    Skill I want to acquire: ${skill}%0A
+    Additional Info: ${message}`;
+
+    // Redirect to WhatsApp
+    window.open(`https://wa.me/${phoneNumber}?text=${text}`, "_blank");
+  });
